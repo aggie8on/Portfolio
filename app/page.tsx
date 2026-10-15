@@ -146,7 +146,7 @@ export default function Home() {
         <div className="page-shell">
           <div className="contact-top"><span>Have something good in mind?</span><span>TOOTHLESS® · INDEPENDENT BY DESIGN</span></div>
           <h2>Let’s make it<br /><em>mean something.</em></h2>
-          <a className="contact-link" href="mailto:hello@example.com?subject=Project%20enquiry%20%E2%80%94%20Toothless">Start a conversation <span aria-hidden="true">↗</span></a>
+          <a className="contact-link" href="mailto:hi@toothless.design?subject=Project%20enquiry%20%E2%80%94%20Toothless">Start a conversation <span aria-hidden="true">↗</span></a>
           <div className="footer-bottom">
             <a href="#top" className="footer-brand"><img src="/brand/logos/toothless-05.svg" alt="Toothless" /></a>
             <span>Logos, identity & systems.</span>
