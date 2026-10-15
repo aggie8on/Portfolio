@@ -61,14 +61,6 @@ export default function Home() {
               <a className="text-link" href="#studio">Get to know us <span aria-hidden="true">↓</span></a>
             </div>
           </div>
-          <div className="hero-mark" aria-label="Toothless identity mark">
-            <div className="mark-frame">
-              <img src="/brand/icons/toothless-09.svg" alt="" className="hero-symbol" />
-              <span className="mark-corner mark-corner-tl" />
-              <span className="mark-corner mark-corner-br" />
-            </div>
-            <div className="mark-caption"><span>TOOTHLESS®</span><span>IDENTITY & SYSTEMS</span></div>
-          </div>
         </div>
         <div className="hero-footnote"><span>Clear thinking. Distinctive design.</span><span>Scroll to explore ↓</span></div>
       </section>
@@ -80,10 +72,6 @@ export default function Home() {
             <h2>We make brands feel like <em>themselves.</em></h2>
             <p>Toothless is an independent creative studio focused on logos, identity and systems. We turn sharp ideas into thoughtful, distinctive identities — made to work beyond the first impression.</p>
             <p>Small by design. Curious by nature. Serious about the details that make the difference.</p>
-          </div>
-          <div className="studio-stamp">
-            <img src="/brand/icons/toothless-10.svg" alt="" />
-            <span>Less noise.<br />More meaning.</span>
           </div>
         </div>
       </section>
@@ -148,7 +136,7 @@ export default function Home() {
           <h2>Let’s make it<br /><em>mean something.</em></h2>
           <a className="contact-link" href="mailto:hi@toothless.design?subject=Project%20enquiry%20%E2%80%94%20Toothless">Start a conversation <span aria-hidden="true">↗</span></a>
           <div className="footer-bottom">
-            <a href="#top" className="footer-brand"><img src="/brand/logos/toothless-05.svg" alt="Toothless" /></a>
+            <span className="footer-note">Toothless Studio</span>
             <span>Logos, identity & systems.</span>
             <a href="#top">Back to top ↑</a>
             <span>© {new Date().getFullYear()} Toothless Studio</span>
