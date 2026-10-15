@@ -1,18 +1,160 @@
-const projects = [
-  { n: "01", title: "Form follows feeling", type: "Digital experience · Art direction", year: "2025", slug: "form-follows-feeling", style: "from-[#d8f36a] via-[#c8e85b] to-[#9fbd45]", visual: "FORM / FEELING", text: "A bold typographic study in motion and identity." },
-  { n: "02", title: "Objects of everyday", type: "Brand identity · E-commerce", year: "2025", slug: "objects-of-everyday", style: "from-[#e5d8cd] via-[#d1b9a5] to-[#b18d74]", visual: "OBJECTS", text: "A quiet, tactile identity for considered living." },
-  { n: "03", title: "Common ground", type: "Website · Strategy", year: "2024", slug: "common-ground", style: "from-[#d5e2ec] via-[#a9c1d4] to-[#7999b0]", visual: "common\nground", text: "Making room for a more connected future." },
-  { n: "04", title: "After hours", type: "Campaign · Art direction", year: "2024", slug: "after-hours", style: "from-[#c5b4e8] via-[#9d86c9] to-[#66528e]", visual: "AFTER\nHOURS", text: "A playful visual world built around the night." },
-  { n: "05", title: "A better kind of energy", type: "Identity · Digital", year: "2023", slug: "better-kind-of-energy", style: "from-[#f2c2a7] via-[#e9a17c] to-[#cb7551]", visual: "GOOD\nENERGY", text: "A bright, optimistic system for a changing world." },
-  { n: "06", title: "Small worlds", type: "Editorial · Creative coding", year: "2023", slug: "small-worlds", style: "from-[#e6e3dc] via-[#c8c6bd] to-[#9e9d91]", visual: "small worlds", text: "An editorial playground for curious minds." },
+const services = [
+  {
+    number: "01",
+    title: "Brand foundations",
+    description: "Positioning, naming support and the thinking that gives a visual identity something real to stand for.",
+    tags: ["Direction", "Positioning", "Concept"],
+  },
+  {
+    number: "02",
+    title: "Logo & identity",
+    description: "Distinctive marks and considered visual identities that feel unmistakably yours, not borrowed from a trend.",
+    tags: ["Logo design", "Visual identity", "Art direction"],
+  },
+  {
+    number: "03",
+    title: "Identity systems",
+    description: "Flexible rules, assets and guidelines that help your brand stay recognisable wherever it shows up.",
+    tags: ["Typography", "Colour", "Guidelines"],
+  },
+];
+
+const principles = [
+  {
+    number: "01",
+    title: "Start with the why.",
+    description: "The strongest visual decisions come from a clear idea. We get to the heart of the thing before making it look like anything.",
+  },
+  {
+    number: "02",
+    title: "Make it work hard.",
+    description: "A logo is only the beginning. The identity needs to work across real touchpoints, at different sizes, in everyday use.",
+  },
+  {
+    number: "03",
+    title: "Leave room to grow.",
+    description: "A good system is recognisable without being rigid. It gives a brand a point of view and space to keep becoming.",
+  },
 ];
 
 export default function Home() {
-  return <main>
-    <header className="page-shell flex items-center justify-between py-7 text-[12px] uppercase tracking-[.12em]"><a href="#" className="font-bold tracking-[-.04em] text-base normal-case">J. / Portfolio</a><nav className="flex gap-6 sm:gap-10"><a href="#work" className="hover:opacity-50">Work <span className="text-neutral-400">(06)</span></a><a href="#about" className="hover:opacity-50">About</a><a href="#contact" className="hover:opacity-50">Contact ↗</a></nav></header>
-    <section className="page-shell pb-20 pt-20 sm:pb-28 sm:pt-32"><div className="mb-8 flex items-center gap-3 text-[11px] uppercase tracking-[.16em] text-neutral-500"><span className="h-2 w-2 rounded-full bg-[#8da83c]"></span> Independent designer & creative developer</div><h1 className="max-w-[1050px] text-[clamp(3.5rem,10vw,9.5rem)] font-medium leading-[.88] tracking-[-.085em]">Making digital<br/>feel <span className="font-serif italic font-normal">different.</span></h1><div className="mt-12 flex flex-col justify-between gap-7 border-t border-neutral-300 pt-5 sm:flex-row sm:items-end"><p className="max-w-[430px] text-lg leading-relaxed text-neutral-600">I partner with ambitious people to shape thoughtful brands, useful digital experiences, and things that feel a little unexpected.</p><a href="#work" className="w-fit rounded-full border border-neutral-300 px-5 py-3 text-sm transition hover:bg-[#d8f36a] hover:border-[#d8f36a]">Explore selected work ↓</a></div></section>
-    <section id="work" className="page-shell pb-28"><div className="mb-6 flex items-end justify-between border-b border-neutral-300 pb-4"><h2 className="text-sm uppercase tracking-[.14em]">Selected work</h2><span className="text-xs text-neutral-500">2023 — 2025</span></div><div className="grid grid-cols-1 gap-x-5 gap-y-12 sm:grid-cols-2">{projects.map((p) => <a key={p.slug} href={`/projects/${p.slug}`} className="project-card group block"><div className={`project-art relative flex aspect-[1.18/1] items-center justify-center overflow-hidden bg-gradient-to-br ${p.style}`}><div className="absolute left-5 top-5 text-xs tracking-widest opacity-60">{p.n} / SELECTED PROJECT</div><div className="whitespace-pre-line text-center text-[clamp(2.5rem,6vw,6.5rem)] font-black leading-[.82] tracking-[-.09em]">{p.visual}</div><div className="absolute bottom-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-black text-white transition group-hover:rotate-45">↗</div></div><div className="flex items-start justify-between gap-4 pt-4"><div><h3 className="text-xl tracking-[-.04em]">{p.title}</h3><p className="mt-1 text-sm text-neutral-500">{p.type}</p></div><span className="pt-1 text-sm text-neutral-500">{p.year}</span></div></a>)}</div></section>
-    <section id="about" className="bg-[#eaeae5] py-20 sm:py-28"><div className="page-shell grid gap-10 sm:grid-cols-[1fr_1.2fr]"><p className="text-xs uppercase tracking-[.16em] text-neutral-500">A little about me</p><div><h2 className="text-4xl leading-[1.02] tracking-[-.06em] sm:text-6xl">Good work starts with <span className="font-serif italic">good questions.</span></h2><p className="mt-7 max-w-[560px] text-lg leading-relaxed text-neutral-600">I’m an independent creative working across strategy, visual identity, and digital design. I like clear ideas, strong typography, useful details, and collaborating with people who care about what they put into the world.</p><div className="mt-8 flex flex-wrap gap-2">{["Art direction","Brand identity","Web design","Creative development","Digital experiences"].map(x=><span key={x} className="rounded-full border border-neutral-300 px-4 py-2 text-sm">{x}</span>)}</div></div></div></section>
-    <footer id="contact" className="page-shell py-16 sm:py-24"><p className="text-xs uppercase tracking-[.16em] text-neutral-500">Have something in mind?</p><a href="mailto:hello@example.com" className="mt-5 block text-[clamp(2.8rem,8vw,7.5rem)] leading-none tracking-[-.08em] hover:text-neutral-500">Let’s make it<br/><span className="font-serif italic">matter.</span> ↗</a><div className="mt-16 flex flex-col justify-between gap-3 border-t border-neutral-300 pt-5 text-xs text-neutral-500 sm:flex-row"><span>© 2026 J. — Independent by design.</span><div className="flex gap-6"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="mailto:hello@example.com">Email ↗</a></div></div></footer>
-  </main>;
+  return (
+    <main>
+      <header className="site-header page-shell">
+        <a href="#top" className="brand-link" aria-label="Toothless home">
+          <img src="/brand/logos/toothless-02.svg" alt="Toothless" className="brand-logo" />
+        </a>
+        <nav className="main-nav" aria-label="Main navigation">
+          <a href="#studio">Studio</a>
+          <a href="#services">What we do</a>
+          <a className="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+
+      <section id="top" className="hero page-shell">
+        <div className="eyebrow"><span className="status-dot" /> Independent creative studio</div>
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <h1>Good ideas deserve a <em>distinct identity.</em></h1>
+            <div className="hero-bottom">
+              <p>Toothless builds logos, visual identities and flexible systems for people making something worth noticing.</p>
+              <a className="text-link" href="#studio">Get to know us <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+          <div className="hero-mark" aria-label="Toothless identity mark">
+            <div className="mark-frame">
+              <img src="/brand/icons/toothless-09.svg" alt="" className="hero-symbol" />
+              <span className="mark-corner mark-corner-tl" />
+              <span className="mark-corner mark-corner-br" />
+            </div>
+            <div className="mark-caption"><span>TOOTHLESS®</span><span>IDENTITY & SYSTEMS</span></div>
+          </div>
+        </div>
+        <div className="hero-footnote"><span>Clear thinking. Distinctive design.</span><span>Scroll to explore ↓</span></div>
+      </section>
+
+      <section id="studio" className="studio-band">
+        <div className="page-shell studio-layout">
+          <p className="section-label">A little about us <span>— 01</span></p>
+          <div className="studio-copy">
+            <h2>We make brands feel like <em>themselves.</em></h2>
+            <p>Toothless is an independent creative studio focused on logos, identity and systems. We turn sharp ideas into thoughtful, distinctive identities — made to work beyond the first impression.</p>
+            <p>Small by design. Curious by nature. Serious about the details that make the difference.</p>
+          </div>
+          <div className="studio-stamp">
+            <img src="/brand/icons/toothless-10.svg" alt="" />
+            <span>Less noise.<br />More meaning.</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="services-section page-shell">
+        <div className="section-heading">
+          <p className="section-label">What we do <span>— 02</span></p>
+          <h2>From first thought<br />to <em>full expression.</em></h2>
+        </div>
+        <div className="service-list">
+          {services.map((service) => (
+            <article className="service-row" key={service.number}>
+              <span className="service-number">{service.number}</span>
+              <h3>{service.title}</h3>
+              <div className="service-details">
+                <p>{service.description}</p>
+                <div className="tag-list">
+                  {service.tags.map((tag) => <span key={tag}>{tag}</span>)}
+                </div>
+              </div>
+              <span className="service-arrow" aria-hidden="true">↗</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="principles-section">
+        <div className="page-shell">
+          <div className="section-heading principles-heading">
+            <p className="section-label">How we think <span>— 03</span></p>
+            <h2>Good design has a reason <em>to exist.</em></h2>
+          </div>
+          <div className="principles-grid">
+            {principles.map((principle) => (
+              <article className="principle-card" key={principle.number}>
+                <span className="principle-number">{principle.number}</span>
+                <h3>{principle.title}</h3>
+                <p>{principle.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="process-section page-shell">
+        <div className="process-intro">
+          <p className="section-label">A clear process <span>— 04</span></p>
+          <h2>Thoughtful work.<br /><em>No mystery.</em></h2>
+          <p>Every project is different, but the aim stays the same: make the right decisions, together, and turn them into a system you can actually use.</p>
+        </div>
+        <ol className="process-list">
+          <li><span>01</span><div><h3>Listen</h3><p>Understand the business, the people and the problem.</p></div></li>
+          <li><span>02</span><div><h3>Define</h3><p>Find the central idea and the direction worth pursuing.</p></div></li>
+          <li><span>03</span><div><h3>Design</h3><p>Build the identity and refine the details until they feel right.</p></div></li>
+          <li><span>04</span><div><h3>Deliver</h3><p>Hand over a coherent, practical system ready for real life.</p></div></li>
+        </ol>
+      </section>
+
+      <footer id="contact" className="contact-section">
+        <div className="page-shell">
+          <div className="contact-top"><span>Have something good in mind?</span><span>TOOTHLESS® · INDEPENDENT BY DESIGN</span></div>
+          <h2>Let’s make it<br /><em>mean something.</em></h2>
+          <a className="contact-link" href="mailto:hello@example.com?subject=Project%20enquiry%20%E2%80%94%20Toothless">Start a conversation <span aria-hidden="true">↗</span></a>
+          <div className="footer-bottom">
+            <a href="#top" className="footer-brand"><img src="/brand/logos/toothless-05.svg" alt="Toothless" /></a>
+            <span>Logos, identity & systems.</span>
+            <a href="#top">Back to top ↑</a>
+            <span>© {new Date().getFullYear()} Toothless Studio</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
 }
