@@ -27,15 +27,21 @@ export default function ContactForm() {
         }),
       });
       const result = await response.json();
-      if (!response.ok || result.success === "false" || result.success === false) {
-        throw new Error(result.message || "The message could not be sent.");
+      if (!response.ok || String(result.success) !== "true") {
+        const message = String(result.message || "");
+        if (/activat/i.test(message)) {
+          throw new Error("One-time setup: check hi@toothless.design for FormSubmit’s activation email and confirm the form. Then submissions will arrive here.");
+        }
+        throw new Error(message || "The message could not be sent.");
       }
       setStatus("success");
       setFeedback("Thanks for reaching out. Your message has been sent.");
       form.reset();
-    } catch {
+    } catch (error) {
       setStatus("error");
-      setFeedback("We couldn’t send your message just now. Please email hi@toothless.design directly.");
+      setFeedback(error instanceof Error && error.message
+        ? error.message
+        : "We couldn’t send your message just now. Please email hi@toothless.design directly.");
     }
   }
 
