@@ -1,31 +1,130 @@
-type PlaceholderProject = { slug: string; number: string; title: string; focus: string; year: string; headline: string; description: string; images: { src: string; alt: string; label: string }[] };
+type PlaceholderProject = {
+  slug: string;
+  number: string;
+  title: string;
+  focus: string;
+  year: string;
+  headline: string;
+  description: string;
+  collaborator: string;
+  tags: string[];
+  images: { src: string; alt: string; kind?: "wide" | "pair" | "detail" }[];
+};
+
 const projects: PlaceholderProject[] = [
- { slug: "client-project-01", number: "CL—001", title: "Client Project 01", focus: "Brand identity", year: "Placeholder", headline: "A clearer point of view.", description: "A placeholder case study exploring how a focused brand idea can shape a distinctive visual language. Replace this introduction with the approved brief and project story before publishing as client work.", images: [
-  { src: "https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=2200&q=85", alt: "Minimal fragrance packaging photography", label: "01 / Visual direction" },
-  { src: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1600&q=85", alt: "Minimal skincare product arrangement", label: "02 / Identity in context" },
-  { src: "https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=2200&q=85", alt: "Design workspace and printed material", label: "03 / System exploration" },
- ] },
- { slug: "client-project-02", number: "CL—002", title: "Client Project 02", focus: "Visual identity", year: "Placeholder", headline: "Built to stand apart.", description: "A placeholder case study for a future visual identity. The final page will document the brief, the design decisions and how the identity works across real touchpoints.", images: [
-  { src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=2200&q=85", alt: "Minimal watch product photography", label: "01 / Visual direction" },
-  { src: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1600&q=85", alt: "Camera product photography", label: "02 / Identity in context" },
-  { src: "https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=2200&q=85", alt: "Printed design materials on a desk", label: "03 / System exploration" },
- ] },
- { slug: "client-project-03", number: "CL—003", title: "Client Project 03", focus: "Identity system", year: "Placeholder", headline: "A system with purpose.", description: "A placeholder case study for a future identity system. Approved project imagery, the real story and final applications will replace these temporary visuals.", images: [
-  { src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=2200&q=85", alt: "Colourful retro product photography", label: "01 / Visual direction" },
-  { src: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1600&q=85", alt: "Product photography in a bold colour palette", label: "02 / Identity in context" },
-  { src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=2200&q=85", alt: "Minimal product detail photography", label: "03 / System exploration" },
- ] },
+  {
+    slug: "client-project-01",
+    number: "01",
+    title: "Client Project 01",
+    focus: "Brand identity",
+    year: "2026",
+    headline: "A clearer point of view.",
+    description: "A placeholder project exploring how a focused idea can become a distinctive, useful visual identity.",
+    collaborator: "To be confirmed",
+    tags: ["Brand identity", "Art direction", "Visual system"],
+    images: [
+      { src: "https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=2200&q=85", alt: "Minimal fragrance packaging, temporary project visual", kind: "wide" },
+      { src: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1600&q=85", alt: "Minimal skincare product arrangement, temporary project visual", kind: "pair" },
+      { src: "https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=2200&q=85", alt: "Design workspace and printed material, temporary project visual", kind: "wide" },
+    ],
+  },
+  {
+    slug: "client-project-02",
+    number: "02",
+    title: "Client Project 02",
+    focus: "Visual identity",
+    year: "2026",
+    headline: "Built to stand apart.",
+    description: "A placeholder visual identity project. The final story and artwork will be added when the client work is approved.",
+    collaborator: "To be confirmed",
+    tags: ["Visual identity", "Art direction", "Design"],
+    images: [
+      { src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=2200&q=85", alt: "Minimal watch product, temporary project visual", kind: "wide" },
+      { src: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1600&q=85", alt: "Camera product, temporary project visual", kind: "pair" },
+      { src: "https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=2200&q=85", alt: "Printed design materials, temporary project visual", kind: "wide" },
+    ],
+  },
+  {
+    slug: "client-project-03",
+    number: "03",
+    title: "Client Project 03",
+    focus: "Identity system",
+    year: "2026",
+    headline: "A system with purpose.",
+    description: "A placeholder identity system showing how a consistent visual language can extend across touchpoints.",
+    collaborator: "To be confirmed",
+    tags: ["Identity system", "Packaging", "Art direction"],
+    images: [
+      { src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=2200&q=85", alt: "Retro product, temporary project visual", kind: "wide" },
+      { src: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1600&q=85", alt: "Product photography, temporary project visual", kind: "pair" },
+      { src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=2200&q=85", alt: "Minimal product detail, temporary project visual", kind: "wide" },
+    ],
+  },
 ];
-export function generateStaticParams() { return projects.map(project => ({ slug: project.slug })); }
+
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
+}
+
 export default function PlaceholderProjectPage({ params }: { params: { slug: string } }) {
- const projectIndex = projects.findIndex(item => item.slug === params.slug);
- const project = projects[projectIndex];
- if (!project) return null;
- const nextProject = projects[(projectIndex + 1) % projects.length];
- return <main><header className="site-header page-shell"><a href="/" className="brand-link" aria-label="Toothless home"><img src="/brand/logos/toothless-02.svg" alt="Toothless" className="brand-logo" /></a><nav className="main-nav" aria-label="Main navigation"><a href="/work" aria-current="page">Work</a><a href="/studio">Studio</a><a className="nav-contact" href="/contact">Let’s talk <span aria-hidden="true">↗</span></a></nav></header>
- <section className="project-opening page-shell"><a className="back-link" href="/work">← All projects</a><div className="project-opening-heading"><div><p className="section-label">{project.number} <span>— {project.year}</span></p><h1>{project.title}</h1></div><p className="project-opening-description">{project.description}</p></div><div className="project-facts project-facts-compact"><div><span>Client</span><p>{project.title} <small>(placeholder)</small></p></div><div><span>Services</span><p>{project.focus} · Art direction</p></div><div><span>Year</span><p>To be confirmed</p></div></div></section>
- <section className="emre-case-gallery page-shell" aria-label={project.title + " case study imagery"}><figure className="emre-case-hero"><img src={project.images[0].src} alt={project.images[0].alt} /><figcaption>{project.images[0].label}</figcaption></figure><p className="emre-case-placeholder">Placeholder imagery · Replace with approved project visuals.</p><div className="emre-case-pair">{project.images.slice(1, 3).map(image => <figure key={image.label}><img src={image.src} alt={image.alt} loading="lazy" /><figcaption>{image.label}</figcaption></figure>)}</div></section>
- <section className="project-story page-shell"><p className="section-label">Project overview <span>— 01</span></p><div><h2>{project.headline}</h2><p>This case-study structure follows the image-led rhythm of Emre Kayganaci’s project pages: a concise opening, clear project details, and generous imagery that carries the story.</p><p>These are temporary visual references only. Replace them with original client work and the approved project narrative before presenting the page as a completed case study.</p><a className="text-link" href="/contact">Discuss a project <span aria-hidden="true">↗</span></a></div></section>
- <nav className="project-next page-shell" aria-label="Project navigation"><a href="/work">← All projects</a><a href={"/work/" + nextProject.slug}>Next project <span aria-hidden="true">↗</span></a></nav>
- <footer className="studio-footer"><div className="page-shell studio-footer-inner"><div className="studio-footer-top"><span className="footer-index">TOOTHLESS® / INDEPENDENT CREATIVE STUDIO</span><span className="footer-kicker">Have a good idea of your own?</span></div><div className="studio-footer-main"><h2>Make it<br/><em>matter.</em></h2><div className="studio-footer-action"><p>Logos, identity and systems for people making something worth noticing.</p><a href="/contact" className="footer-cta">Let’s make it real <span aria-hidden="true">↗</span></a></div></div><div className="studio-footer-bottom"><a className="footer-email" href="mailto:hi@toothless.design">hi@toothless.design</a><nav aria-label="Footer navigation"><a href="/">Home</a><a href="/work">Work</a><a href="/studio">Studio</a><a href="/contact">Contact</a></nav><span>© {new Date().getFullYear()} Toothless Studio</span></div></div></footer></main>;
+  const projectIndex = projects.findIndex((item) => item.slug === params.slug);
+  const project = projects[projectIndex];
+  if (!project) return null;
+  const nextProject = projects[(projectIndex + 1) % projects.length];
+
+  return (
+    <main className="emre-project-page">
+      <header className="site-header page-shell">
+        <a href="/" className="brand-link" aria-label="Toothless home">
+          <img src="/brand/logos/toothless-02.svg" alt="Toothless" className="brand-logo" />
+        </a>
+        <nav className="main-nav" aria-label="Main navigation">
+          <a href="/work" aria-current="page">Work</a>
+          <a href="/studio">Studio</a>
+          <a className="nav-contact" href="/contact">Let’s talk <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+
+      <section className="emre-project-intro">
+        <a className="emre-back-link" href="/work">← All projects</a>
+        <div className="emre-project-title-row">
+          <h1>{project.title}</h1>
+          <span className="emre-project-year">{project.year}</span>
+        </div>
+        <div className="emre-project-details">
+          <div className="emre-project-credits">
+            <div><span>Client</span><p>{project.title} <small>(placeholder)</small></p></div>
+            <div><span>Collaborator</span><p>{project.collaborator}</p></div>
+            <div><span>Services</span><p>{project.focus}</p></div>
+          </div>
+          <div className="emre-project-summary">
+            <p>{project.description}</p>
+            <div className="emre-project-tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="emre-project-gallery" aria-label={project.title + " project imagery"}>
+        {project.images.map((image, index) => (
+          <figure className={"emre-project-frame emre-project-frame-" + (image.kind || "wide")} key={image.src}>
+            <img src={image.src} alt={image.alt} loading={index === 0 ? "eager" : "lazy"} />
+          </figure>
+        ))}
+        <p className="emre-placeholder-disclaimer">Project imagery is temporary and will be replaced with approved Toothless Studio work.</p>
+      </section>
+
+      <nav className="emre-project-navigation page-shell" aria-label="Project navigation">
+        <a href="/work">← All projects</a>
+        <a href={"/work/" + nextProject.slug}>Next project: {nextProject.title} <span aria-hidden="true">↗</span></a>
+      </nav>
+
+      <footer className="studio-footer">
+        <div className="page-shell studio-footer-inner">
+          <div className="studio-footer-top"><span className="footer-index">TOOTHLESS® / INDEPENDENT CREATIVE STUDIO</span><span className="footer-kicker">Have a good idea of your own?</span></div>
+          <div className="studio-footer-main"><h2>Make it<br/><em>matter.</em></h2><div className="studio-footer-action"><p>Logos, identity and systems for people making something worth noticing.</p><a href="/contact" className="footer-cta">Let’s make it real <span aria-hidden="true">↗</span></a></div></div>
+          <div className="studio-footer-bottom"><a className="footer-email" href="mailto:hi@toothless.design">hi@toothless.design</a><nav aria-label="Footer navigation"><a href="/">Home</a><a href="/work">Work</a><a href="/studio">Studio</a><a href="/contact">Contact</a></nav><span>© {new Date().getFullYear()} Toothless Studio</span></div>
+        </div>
+      </footer>
+    </main>
+  );
 }
