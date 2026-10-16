@@ -541,3 +541,48 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 400; letter-spacing: -.07
  .contact-form-message { grid-column: auto; }
  .contact-form-submit { align-items: flex-start; flex-direction: column; gap: 13px; }
 }
+
+
+/* Project detail layout refined against the supplied Emre Kayganaci reference */
+.emre-project-page { background: #fff; color: #242424; }
+.emre-project-page .site-header { width: min(1440px, calc(100% - 88px)); min-height: 74px; border-bottom: 0; }
+.emre-project-page .brand-logo { width: 136px; }
+.emre-project-page .main-nav { font-size: 11px; }
+.emre-project-intro { width: min(920px, calc(100% - 48px)); margin: 0 auto; padding: 34px 0 18px; }
+.emre-back-link { display: inline-block; margin-bottom: 30px; color: #777; font-size: 11px; }
+.emre-project-title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
+.emre-project-title-row h1 { margin: 0; font-size: clamp(32px, 5vw, 58px); font-weight: 500; line-height: 1.04; letter-spacing: -.065em; }
+.emre-project-year { color: #777; font-size: 11px; white-space: nowrap; }
+.emre-project-details { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(28px, 6vw, 76px); margin-top: 28px; padding-top: 20px; border-top: 1px solid #e8e8e8; }
+.emre-project-credits { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 18px; align-content: start; }
+.emre-project-credits > div span { display: block; margin-bottom: 7px; color: #898989; font-size: 10px; }
+.emre-project-credits p { margin: 0; font-size: 11px; line-height: 1.5; }
+.emre-project-credits small { color: #999; font-size: 9px; }
+.emre-project-summary > p { max-width: 480px; margin: 0; color: #565656; font-size: 12px; line-height: 1.7; }
+.emre-project-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 15px; }
+.emre-project-tags span { padding: 6px 9px; border: 1px solid #e4e4e4; border-radius: 2px; color: #666; font-size: 9px; }
+.emre-project-gallery { width: min(1100px, calc(100% - 32px)); margin: 0 auto; padding: 0 0 52px; }
+.emre-project-frame { display: flex; align-items: center; justify-content: center; overflow: hidden; margin: 0 0 12px; border-radius: 11px; background: #f6f6f6; }
+.emre-project-frame img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.emre-project-frame-wide { min-height: clamp(320px, 65vw, 760px); }
+.emre-project-frame-pair { width: 84%; margin-inline: auto; min-height: clamp(300px, 52vw, 620px); }
+.emre-project-frame-detail { min-height: clamp(280px, 48vw, 560px); }
+.emre-placeholder-disclaimer { margin: 18px 2px 0; color: #999; font-size: 10px; line-height: 1.6; }
+.emre-project-navigation { display: flex; justify-content: space-between; gap: 18px; padding-top: 17px; padding-bottom: 58px; border-top: 1px solid #e8e8e8; font-size: 11px; }
+.emre-project-navigation a:hover, .emre-back-link:hover { opacity: .58; }
+.emre-project-page .studio-footer { background: var(--ink); color: var(--paper); }
+@media (max-width: 640px) {
+  .emre-project-page .site-header { width: calc(100% - 32px); min-height: 64px; }
+  .emre-project-page .brand-logo { width: 108px; }
+  .emre-project-intro { width: calc(100% - 36px); padding-top: 24px; }
+  .emre-back-link { margin-bottom: 25px; }
+  .emre-project-title-row h1 { font-size: clamp(30px, 8vw, 42px); }
+  .emre-project-details { grid-template-columns: 1fr; gap: 24px; margin-top: 21px; }
+  .emre-project-credits { grid-template-columns: 1fr 1fr; gap: 17px; }
+  .emre-project-gallery { width: calc(100% - 16px); }
+  .emre-project-frame { border-radius: 8px; margin-bottom: 8px; }
+  .emre-project-frame-wide { min-height: 66vw; }
+  .emre-project-frame-pair { width: 92%; min-height: 60vw; }
+  .emre-project-frame-detail { min-height: 55vw; }
+  .emre-project-navigation { align-items: flex-start; flex-direction: column; padding-bottom: 42px; }
+}
