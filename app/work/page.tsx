@@ -1,10 +1,37 @@
 const projects = [
- {slug:"toothless-studio",title:"Toothless Studio",service:"Identity system",year:"2026",image:"https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=1800&q=85",alt:"Temporary design studio project image"},
- {slug:"client-project-01",title:"Client Project 01",service:"Brand identity",year:"",image:"https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=1800&q=85",alt:"Temporary product project image"},
- {slug:"client-project-02",title:"Client Project 02",service:"Visual identity",year:"",image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1800&q=85",alt:"Temporary product project image"},
- {slug:"client-project-03",title:"Client Project 03",service:"Identity system",year:"",image:"https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1800&q=85",alt:"Temporary product project image"}
+  { slug: "toothless-studio", title: "Toothless Studio", service: "Identity system", year: "2026" },
+  { slug: "client-project-01", title: "Client project 01", service: "Brand identity", year: "In progress" },
+  { slug: "client-project-02", title: "Client project 02", service: "Visual identity", year: "In progress" },
+  { slug: "client-project-03", title: "Client project 03", service: "Identity system", year: "In progress" },
 ];
-export default function WorkPage(){return <main className="emre-work-page">
-<header className="site-header page-shell"><a href="/" className="brand-link" aria-label="Toothless home"><img src="/brand/logos/toothless-02.svg" alt="Toothless" className="brand-logo"/></a><nav className="main-nav" aria-label="Main navigation"><a href="/work" aria-current="page">Work</a><a href="/studio">Studio</a><a className="nav-contact" href="/contact">Let’s talk <span aria-hidden="true">↗</span></a></nav></header>
-<section className="emre-work-index"><div className="emre-work-grid">{projects.map((p,i)=><a className="emre-work-card" href={"/work/"+p.slug} key={p.slug}><div className="emre-work-image"><img src={p.image} alt={p.alt} loading={i===0?"eager":"lazy"}/></div><div className="emre-work-caption"><div><h1>{p.title}</h1><p>{p.service}{p.year?" · "+p.year:""}</p></div><span aria-hidden="true">↗</span></div></a>)}</div><p className="emre-work-note">Selected work · Client names and images are temporary placeholders where noted.</p></section>
-<footer className="studio-footer"><div className="page-shell studio-footer-inner"><div className="studio-footer-top"><span className="footer-index">TOOTHLESS® / INDEPENDENT CREATIVE STUDIO</span><span className="footer-kicker">Have a project that deserves a point of view?</span></div><div className="studio-footer-main"><h2>Make it<br/><em>matter.</em></h2><div className="studio-footer-action"><p>Logos, identity and systems for people making something worth noticing.</p><a href="/contact" className="footer-cta">Bring us the brief <span aria-hidden="true">↗</span></a></div></div><div className="studio-footer-bottom"><a className="footer-email" href="mailto:hi@toothless.design">hi@toothless.design</a><nav aria-label="Footer navigation"><a href="/">Home</a><a href="/work">Work</a><a href="/studio">Studio</a><a href="/contact">Contact</a></nav><span>© {new Date().getFullYear()} Toothless Studio</span></div></div></footer></main>}
+
+export default function WorkPage() {
+  return <main className="minimal-site">
+    <header className="site-header page-shell minimal-header">
+      <a href="/" className="minimal-wordmark" aria-label="Toothless home">toothless<span>®</span></a>
+      <nav className="main-nav" aria-label="Main navigation"><a href="/work" aria-current="page">Work</a><a href="/studio">Studio</a><a href="/contact">Contact <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <section className="minimal-page-intro page-shell">
+      <p className="minimal-overline">Toothless® / Selected work</p>
+      <h1>A few things<br/><em>we’ve made.</em></h1>
+      <p>Brand identities and visual systems built around a clear idea.</p>
+    </section>
+    <section className="minimal-work minimal-work-index page-shell" aria-label="Project index">
+      <div className="minimal-section-head"><h2>Projects</h2><span>01 — 04</span></div>
+      <div className="minimal-project-list">
+        {projects.map((project, index) => <a className="minimal-project-row" href={"/work/" + project.slug} key={project.slug}>
+          <span className="minimal-project-index">0{index + 1}</span>
+          <span className="minimal-project-name">{project.title}</span>
+          <span className="minimal-project-type">{project.service}</span>
+          <span className="minimal-project-year">{project.year}</span>
+          <span className="minimal-project-arrow" aria-hidden="true">↗</span>
+        </a>)}
+      </div>
+      <p className="minimal-note">Project names and imagery marked as placeholders are temporary and will be replaced with approved work.</p>
+    </section>
+    <footer className="minimal-footer page-shell">
+      <div className="minimal-footer-top"><p>Have something good in mind?</p><a href="/contact">Let’s talk <span aria-hidden="true">↗</span></a></div>
+      <div className="minimal-footer-bottom"><a className="minimal-wordmark" href="/">toothless<span>®</span></a><a href="mailto:hi@toothless.design">hi@toothless.design</a><span>© {new Date().getFullYear()} Toothless Studio</span></div>
+    </footer>
+  </main>;
+}
