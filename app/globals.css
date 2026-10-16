@@ -606,3 +606,88 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 400; letter-spacing: -.07
 .emre-case-description>p{margin:0;font-size:10px;line-height:1.7;color:#555}.emre-case-description>div{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.emre-case-description>div span{border:1px solid #e2e2df;padding:5px 7px;font-size:8px;color:#666}
 .emre-case-placeholder-note{margin:18px 0 0;color:#999;font-size:9px}.emre-case-next{display:flex;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:48px;border-top:1px solid #eee;font-size:10px}
 @media(max-width:640px){.emre-home-work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 8px}.emre-home-card-title{font-size:11px}.emre-work-grid{grid-template-columns:1fr;gap:4px}.emre-work-image img{aspect-ratio:1.15}.emre-case-panel-hero{min-height:82vw}.emre-case-panel-wide{min-height:68vw}.emre-case-info{width:calc(100% - 24px);padding:24px 14px 20px;margin-bottom:34px}.emre-case-info-grid{grid-template-columns:1fr;gap:18px}.emre-case-next{flex-direction:column}}
+
+
+/* Minimal editorial direction inspired by Jace's restrained portfolio structure. */
+:root { --paper: #fbfbf9; --ink: #20201e; --muted: #777772; --line: #deded8; --forest: #20201e; --lime: #d8ed6e; }
+body { background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+.page-shell { width: min(1080px, calc(100% - 64px)); margin-inline: auto; }
+.minimal-header { min-height: 72px; border-bottom: 1px solid var(--line); }
+.minimal-wordmark { display: inline-flex; align-items: flex-start; gap: 2px; font-size: 19px; font-weight: 700; letter-spacing: -.075em; }
+.minimal-wordmark span { font-size: 9px; letter-spacing: 0; margin-top: 1px; }
+.minimal-header .main-nav { gap: 25px; font-size: 12px; }
+.minimal-header .main-nav a { transition: opacity .18s ease; }
+.minimal-header .main-nav a:hover { opacity: .5; }
+.minimal-header .main-nav .nav-contact { border: 0; border-radius: 0; padding: 0; }
+.minimal-intro { padding-top: clamp(92px, 14vw, 174px); padding-bottom: clamp(86px, 12vw, 140px); }
+.minimal-overline { margin: 0 0 26px; color: var(--muted); font-size: 11px; letter-spacing: .01em; text-transform: none; }
+.minimal-intro h1, .minimal-page-intro h1, .minimal-case-intro h1 { max-width: 850px; margin: 0; font-size: clamp(54px, 9vw, 108px); line-height: .98; font-weight: 500; letter-spacing: -.085em; }
+.minimal-intro h1 em, .minimal-page-intro h1 em { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -.075em; }
+.minimal-intro-bottom { display: flex; justify-content: space-between; align-items: end; gap: 28px; max-width: 800px; margin-top: 35px; }
+.minimal-intro-bottom p { max-width: 440px; margin: 0; font-size: 15px; line-height: 1.65; color: #5e5e58; }
+.minimal-arrow-link { display: inline-flex; align-items: center; gap: 15px; flex-shrink: 0; font-size: 12px; }
+.minimal-arrow-link span { font-size: 16px; transition: transform .2s ease; }
+.minimal-arrow-link:hover span { transform: translate(3px, -3px); }
+.minimal-work { padding-bottom: 95px; }
+.minimal-section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 0 0 15px; border-bottom: 1px solid var(--line); }
+.minimal-section-head h2 { margin: 0; font-size: 13px; font-weight: 500; }
+.minimal-section-head > span { color: var(--muted); font-size: 10px; }
+.minimal-project-list { border-bottom: 1px solid var(--line); }
+.minimal-project-row { display: grid; grid-template-columns: 44px minmax(0, 1fr) minmax(140px, .55fr) 100px 18px; align-items: center; gap: 15px; min-height: 66px; border-bottom: 1px solid var(--line); transition: opacity .2s ease; }
+.minimal-project-row:last-child { border-bottom: 0; }
+.minimal-project-row:hover { opacity: .56; }
+.minimal-project-index, .minimal-project-type, .minimal-project-year { color: var(--muted); font-size: 11px; }
+.minimal-project-name { font-size: 15px; letter-spacing: -.025em; }
+.minimal-project-arrow { justify-self: end; font-size: 16px; }
+.minimal-note { margin: 13px 0 0; color: #888881; font-size: 10px; line-height: 1.5; }
+.minimal-all-work { margin-top: 22px; }
+.minimal-about { display: grid; grid-template-columns: .65fr 1.35fr; gap: 40px; padding-top: 72px; padding-bottom: 110px; border-top: 1px solid var(--line); }
+.minimal-about h2 { margin: 0; font-size: clamp(36px, 5vw, 61px); line-height: 1.04; letter-spacing: -.075em; font-weight: 500; }
+.minimal-about h2 em { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+.minimal-about > div > p { max-width: 475px; margin: 22px 0; color: #5e5e58; font-size: 14px; line-height: 1.7; }
+.minimal-footer { border-top: 1px solid var(--line); padding-top: 24px; padding-bottom: 22px; }
+.minimal-footer-top { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 60px; }
+.minimal-footer-top p { margin: 0; font-size: clamp(23px, 3vw, 36px); letter-spacing: -.06em; }
+.minimal-footer-top > a { font-size: 12px; }
+.minimal-footer-top > a span { margin-left: 10px; }
+.minimal-footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 15px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; }
+.minimal-footer-bottom .minimal-wordmark { color: var(--ink); font-size: 15px; }
+.minimal-page-intro { padding-top: 100px; padding-bottom: 90px; }
+.minimal-page-intro h1 { font-size: clamp(58px, 8vw, 92px); }
+.minimal-page-intro > p:last-child { max-width: 400px; margin: 24px 0 0; color: #5e5e58; font-size: 14px; line-height: 1.7; }
+.minimal-work-index { padding-bottom: 130px; }
+.minimal-case-intro { padding-top: 54px; padding-bottom: 40px; }
+.minimal-back-link { display: inline-block; margin-bottom: 54px; color: var(--muted); font-size: 11px; }
+.minimal-case-intro .minimal-overline { margin-bottom: 14px; }
+.minimal-case-intro h1 { font-size: clamp(52px, 8vw, 90px); }
+.minimal-case-summary { display: grid; grid-template-columns: minmax(0, 1fr) minmax(160px, .55fr); gap: 40px; align-items: start; max-width: 780px; margin-top: 28px; }
+.minimal-case-summary > p { margin: 0; color: #5e5e58; font-size: 14px; line-height: 1.7; }
+.minimal-case-services { display: flex; flex-wrap: wrap; gap: 7px 12px; }
+.minimal-case-services span { color: var(--muted); font-size: 11px; }
+.minimal-case-images { display: grid; gap: 12px; padding-bottom: 60px; }
+.minimal-case-image { margin: 0; overflow: hidden; background: #efefeb; }
+.minimal-case-image img { width: 100%; height: auto; max-height: 820px; object-fit: cover; }
+.minimal-case-image-hero img { aspect-ratio: 1.55; }
+.minimal-case-image-wide img { aspect-ratio: 1.8; }
+.minimal-case-next { display: flex; justify-content: space-between; gap: 20px; padding-top: 18px; padding-bottom: 50px; border-top: 1px solid var(--line); font-size: 11px; }
+@media (max-width: 640px) {
+  .page-shell { width: calc(100% - 36px); }
+  .minimal-header { min-height: 64px; }
+  .minimal-header .main-nav { gap: 15px; font-size: 11px; }
+  .minimal-wordmark { font-size: 17px; }
+  .minimal-intro { padding-top: 90px; padding-bottom: 82px; }
+  .minimal-intro h1 { font-size: clamp(48px, 13vw, 72px); }
+  .minimal-intro-bottom { align-items: start; flex-direction: column; gap: 22px; margin-top: 26px; }
+  .minimal-project-row { grid-template-columns: 25px minmax(0, 1fr) 18px; gap: 8px; min-height: 62px; }
+  .minimal-project-type, .minimal-project-year { display: none; }
+  .minimal-project-name { font-size: 14px; }
+  .minimal-project-arrow { grid-column: 3; grid-row: 1; }
+  .minimal-about { grid-template-columns: 1fr; gap: 28px; padding-top: 48px; padding-bottom: 75px; }
+  .minimal-footer-top { align-items: flex-start; flex-direction: column; padding-bottom: 40px; }
+  .minimal-footer-bottom { flex-wrap: wrap; }
+  .minimal-page-intro { padding-top: 75px; padding-bottom: 65px; }
+  .minimal-case-summary { grid-template-columns: 1fr; gap: 18px; }
+  .minimal-back-link { margin-bottom: 38px; }
+  .minimal-case-image-hero img, .minimal-case-image-wide img { aspect-ratio: 1.15; }
+  .minimal-case-next { flex-direction: column; }
+}
