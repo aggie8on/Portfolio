@@ -1,148 +1,43 @@
 const services = [
-  {
-    number: "01",
-    title: "Brand foundations",
-    description: "Positioning, naming support and the thinking that gives a visual identity something real to stand for.",
-    tags: ["Direction", "Positioning", "Concept"],
-  },
-  {
-    number: "02",
-    title: "Logo & identity",
-    description: "Distinctive marks and considered visual identities that feel unmistakably yours, not borrowed from a trend.",
-    tags: ["Logo design", "Visual identity", "Art direction"],
-  },
-  {
-    number: "03",
-    title: "Identity systems",
-    description: "Flexible rules, assets and guidelines that help your brand stay recognisable wherever it shows up.",
-    tags: ["Typography", "Colour", "Guidelines"],
-  },
+  { number: "01", title: "Brand foundations", description: "Positioning, naming support and the thinking that gives a visual identity something real to stand for.", tags: ["Direction", "Positioning", "Concept"] },
+  { number: "02", title: "Logo & identity", description: "Distinctive marks and considered visual identities that feel unmistakably yours, not borrowed from a trend.", tags: ["Logo design", "Visual identity", "Art direction"] },
+  { number: "03", title: "Identity systems", description: "Flexible rules, assets and guidelines that help your brand stay recognisable wherever it shows up.", tags: ["Typography", "Colour", "Guidelines"] },
 ];
-
 const principles = [
-  {
-    number: "01",
-    title: "Start with the why.",
-    description: "The strongest visual decisions come from a clear idea. We get to the heart of the thing before making it look like anything.",
-  },
-  {
-    number: "02",
-    title: "Make it work hard.",
-    description: "A logo is only the beginning. The identity needs to work across real touchpoints, at different sizes, in everyday use.",
-  },
-  {
-    number: "03",
-    title: "Leave room to grow.",
-    description: "A good system is recognisable without being rigid. It gives a brand a point of view and space to keep becoming.",
-  },
+  { number: "01", title: "Start with the why.", description: "The strongest visual decisions come from a clear idea. We get to the heart of the thing before making it look like anything." },
+  { number: "02", title: "Make it work hard.", description: "A logo is only the beginning. The identity needs to work across real touchpoints, at different sizes, in everyday use." },
+  { number: "03", title: "Leave room to grow.", description: "A good system is recognisable without being rigid. It gives a brand a point of view and space to keep becoming." },
 ];
-
 export default function Home() {
-  return (
-    <main>
-      <header className="site-header page-shell">
-        <a href="#top" className="brand-link" aria-label="Toothless home">
-          <img src="/brand/logos/toothless-02.svg" alt="Toothless" className="brand-logo" />
-        </a>
-        <nav className="main-nav" aria-label="Main navigation">
-          <a href="#studio">Studio</a>
-          <a href="#services">What we do</a>
-          <a className="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
-        </nav>
-      </header>
+  return <main>
+    <header className="site-header page-shell">
+      <a href="/" className="brand-link" aria-label="Toothless home"><img src="/brand/logos/toothless-02.svg" alt="Toothless" className="brand-logo" /></a>
+      <nav className="main-nav" aria-label="Main navigation"><a href="/work">Work</a><a href="/studio">Studio</a><a className="nav-contact" href="/contact">Let’s talk <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <section id="top" className="hero page-shell">
+      <div className="eyebrow"><span className="status-dot" /> Independent creative studio</div>
+      <div className="hero-grid"><div className="hero-copy">
+        <h1>Good ideas deserve a <em>distinct identity.</em></h1>
+        <div className="hero-bottom"><p>Toothless builds logos, visual identities and flexible systems for people making something worth noticing.</p><a className="text-link" href="/work">View selected work <span aria-hidden="true">↗</span></a></div>
+      </div></div>
+      <div className="hero-footnote"><span>Clear thinking. Distinctive design.</span><span>Scroll to explore ↓</span></div>
+    </section>
 
-      <section id="top" className="hero page-shell">
-        <div className="eyebrow"><span className="status-dot" /> Independent creative studio</div>
-        <div className="hero-grid">
-          <div className="hero-copy">
-            <h1>Good ideas deserve a <em>distinct identity.</em></h1>
-            <div className="hero-bottom">
-              <p>Toothless builds logos, visual identities and flexible systems for people making something worth noticing.</p>
-              <a className="text-link" href="#studio">Get to know us <span aria-hidden="true">↓</span></a>
-            </div>
-          </div>
-        </div>
-        <div className="hero-footnote"><span>Clear thinking. Distinctive design.</span><span>Scroll to explore ↓</span></div>
-      </section>
-
-      <section id="studio" className="studio-band">
-        <div className="page-shell studio-layout">
-          <p className="section-label">A little about us <span>— 01</span></p>
-          <div className="studio-copy">
-            <h2>We make brands feel like <em>themselves.</em></h2>
-            <p>Toothless is an independent creative studio focused on logos, identity and systems. We turn sharp ideas into thoughtful, distinctive identities — made to work beyond the first impression.</p>
-            <p>Small by design. Curious by nature. Serious about the details that make the difference.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" className="services-section page-shell">
-        <div className="section-heading">
-          <p className="section-label">What we do <span>— 02</span></p>
-          <h2>From first thought<br />to <em>full expression.</em></h2>
-        </div>
-        <div className="service-list">
-          {services.map((service) => (
-            <article className="service-row" key={service.number}>
-              <span className="service-number">{service.number}</span>
-              <h3>{service.title}</h3>
-              <div className="service-details">
-                <p>{service.description}</p>
-                <div className="tag-list">
-                  {service.tags.map((tag) => <span key={tag}>{tag}</span>)}
-                </div>
-              </div>
-              <span className="service-arrow" aria-hidden="true">↗</span>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="principles-section">
-        <div className="page-shell">
-          <div className="section-heading principles-heading">
-            <p className="section-label">How we think <span>— 03</span></p>
-            <h2>Good design has a reason <em>to exist.</em></h2>
-          </div>
-          <div className="principles-grid">
-            {principles.map((principle) => (
-              <article className="principle-card" key={principle.number}>
-                <span className="principle-number">{principle.number}</span>
-                <h3>{principle.title}</h3>
-                <p>{principle.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="process-section page-shell">
-        <div className="process-intro">
-          <p className="section-label">A clear process <span>— 04</span></p>
-          <h2>Thoughtful work.<br /><em>No mystery.</em></h2>
-          <p>Every project is different, but the aim stays the same: make the right decisions, together, and turn them into a system you can actually use.</p>
-        </div>
-        <ol className="process-list">
-          <li><span>01</span><div><h3>Listen</h3><p>Understand the business, the people and the problem.</p></div></li>
-          <li><span>02</span><div><h3>Define</h3><p>Find the central idea and the direction worth pursuing.</p></div></li>
-          <li><span>03</span><div><h3>Design</h3><p>Build the identity and refine the details until they feel right.</p></div></li>
-          <li><span>04</span><div><h3>Deliver</h3><p>Hand over a coherent, practical system ready for real life.</p></div></li>
-        </ol>
-      </section>
-
-      <footer id="contact" className="contact-section">
-        <div className="page-shell">
-          <div className="contact-top"><span>Have something good in mind?</span><span>TOOTHLESS® · INDEPENDENT BY DESIGN</span></div>
-          <h2>Let’s make it<br /><em>mean something.</em></h2>
-          <a className="contact-link" href="mailto:hi@toothless.design?subject=Project%20enquiry%20%E2%80%94%20Toothless">Start a conversation <span aria-hidden="true">↗</span></a>
-          <div className="footer-bottom">
-            <span className="footer-note">Toothless Studio</span>
-            <span>Logos, identity & systems.</span>
-            <a href="#top">Back to top ↑</a>
-            <span>© {new Date().getFullYear()} Toothless Studio</span>
-          </div>
-        </div>
-      </footer>
-    </main>
-  );
+    <section className="client-strip" aria-label="Selected clients and collaborators"><div className="page-shell client-strip-inner"><div className="client-strip-heading"><p className="section-label">Good company <span>— 01</span></p><p>Selected clients & collaborators</p></div><div className="logo-marquee" aria-label="Placeholder client logos"><div className="logo-marquee-track"><span className="client-wordmark wordmark-serif">CLIENT ONE</span><span className="client-wordmark wordmark-bold">CLIENT TWO®</span><span className="client-wordmark wordmark-spaced">CLIENT THREE</span><span className="client-wordmark wordmark-serif">CLIENT FOUR</span><span className="client-wordmark wordmark-bold">CLIENT FIVE®</span><span className="client-wordmark wordmark-spaced">CLIENT SIX</span><span className="client-wordmark wordmark-serif" aria-hidden="true">CLIENT ONE</span><span className="client-wordmark wordmark-bold" aria-hidden="true">CLIENT TWO®</span><span className="client-wordmark wordmark-spaced" aria-hidden="true">CLIENT THREE</span><span className="client-wordmark wordmark-serif" aria-hidden="true">CLIENT FOUR</span><span className="client-wordmark wordmark-bold" aria-hidden="true">CLIENT FIVE®</span><span className="client-wordmark wordmark-spaced" aria-hidden="true">CLIENT SIX</span></div></div><p className="placeholder-note">Placeholder names for now — we’ll replace these with approved client logos.</p></div></section>
+    <section className="work-preview page-shell" aria-labelledby="featured-work-title">
+      <div className="section-heading work-preview-heading"><p className="section-label">Selected work <span>— 01</span></p><div><h2 id="featured-work-title">Ideas made <em>visible.</em></h2><p className="work-intro">A closer look at how strategy, identity and detail come together.</p></div></div>
+      <div className="featured-work-grid">
+        <a className="work-card work-card-primary" href="/work/toothless-studio"><div className="work-card-art work-card-art-toothless"><span className="work-card-index">TS—001</span><span className="work-card-display">Make<br/><em>meaning.</em></span><span className="work-card-caption">IN-HOUSE IDENTITY</span></div><div className="work-card-meta"><div><span>In-house identity · 2026</span><h3>Toothless Studio</h3></div><span aria-hidden="true">↗</span></div></a>
+        <a className="work-card" href="/work/client-project-01"><div className="work-card-art work-card-art-one"><span className="work-card-index">CL—001</span><span className="work-card-display">Form<br/><em>follows.</em></span><span className="work-card-caption">PLACEHOLDER PROJECT</span></div><div className="work-card-meta"><div><span>Brand identity · Placeholder</span><h3>Client Project 01</h3></div><span aria-hidden="true">↗</span></div></a>
+        <a className="work-card" href="/work/client-project-02"><div className="work-card-art work-card-art-two"><span className="work-card-index">CL—002</span><span className="work-card-display">Made of<br/><em>more.</em></span><span className="work-card-caption">PLACEHOLDER PROJECT</span></div><div className="work-card-meta"><div><span>Visual identity · Placeholder</span><h3>Client Project 02</h3></div><span aria-hidden="true">↗</span></div></a>
+        <a className="work-card" href="/work/client-project-03"><div className="work-card-art work-card-art-three"><span className="work-card-index">CL—003</span><span className="work-card-display">New<br/><em>nature.</em></span><span className="work-card-caption">PLACEHOLDER PROJECT</span></div><div className="work-card-meta"><div><span>Identity system · Placeholder</span><h3>Client Project 03</h3></div><span aria-hidden="true">↗</span></div></a>
+      </div>
+      <div className="work-preview-bottom"><p>Project names and visuals are placeholders where client work is still being gathered. We’ll replace them with approved case studies.</p><a className="text-link" href="/work">Explore the work <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section id="studio" className="studio-band"><div className="page-shell studio-layout"><p className="section-label">A little about us <span>— 02</span></p><div className="studio-copy"><h2>We make brands feel like <em>themselves.</em></h2><p>Toothless is an independent creative studio focused on logos, identity and systems. We turn sharp ideas into thoughtful, distinctive identities — made to work beyond the first impression.</p><p>Small by design. Curious by nature. Serious about the details that make the difference.</p><a className="light-text-link" href="/studio">More about the studio <span aria-hidden="true">↗</span></a></div></div></section>
+    <section id="services" className="services-section page-shell"><div className="section-heading"><p className="section-label">What we do <span>— 03</span></p><h2>From first thought<br/>to <em>full expression.</em></h2></div><div className="service-list">{services.map(service => <article className="service-row" key={service.number}><span className="service-number">{service.number}</span><h3>{service.title}</h3><div className="service-details"><p>{service.description}</p><div className="tag-list">{service.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div><span className="service-arrow" aria-hidden="true">↗</span></article>)}</div></section>
+    <section className="principles-section"><div className="page-shell"><div className="section-heading principles-heading"><p className="section-label">How we think <span>— 04</span></p><h2>Good design has a reason <em>to exist.</em></h2></div><div className="principles-grid">{principles.map(principle => <article className="principle-card" key={principle.number}><span className="principle-number">{principle.number}</span><h3>{principle.title}</h3><p>{principle.description}</p></article>)}</div></div></section>
+    <section className="process-section page-shell"><div className="process-intro"><p className="section-label">A clear process <span>— 05</span></p><h2>Thoughtful work.<br/><em>No mystery.</em></h2><p>Every project is different, but the aim stays the same: make the right decisions, together, and turn them into a system you can actually use.</p><a className="text-link" href="/studio">See how we work <span aria-hidden="true">↗</span></a></div><ol className="process-list"><li><span>01</span><div><h3>Listen</h3><p>Understand the business, the people and the problem.</p></div></li><li><span>02</span><div><h3>Define</h3><p>Find the central idea and the direction worth pursuing.</p></div></li><li><span>03</span><div><h3>Design</h3><p>Build the identity and refine the details until they feel right.</p></div></li><li><span>04</span><div><h3>Deliver</h3><p>Hand over a coherent, practical system ready for real life.</p></div></li></ol></section>
+    <footer id="contact" className="studio-footer"><div className="page-shell studio-footer-inner"><div className="studio-footer-top"><span className="footer-index">TOOTHLESS® / INDEPENDENT CREATIVE STUDIO</span><span className="footer-kicker">A good idea starts with a conversation.</span></div><div className="studio-footer-main"><h2>Make it<br/><em>matter.</em></h2><div className="studio-footer-action"><p>Logos, identity and systems for people making something worth noticing.</p><a href="/contact" className="footer-cta">Tell us what you’re thinking <span aria-hidden="true">↗</span></a></div></div><div className="studio-footer-bottom"><a className="footer-email" href="mailto:hi@toothless.design">hi@toothless.design</a><nav aria-label="Footer navigation"><a href="/">Home</a><a href="/work">Work</a><a href="/studio">Studio</a><a href="/contact">Contact</a></nav><span>© {new Date().getFullYear()} Toothless Studio</span></div></div></footer>
+  </main>;
 }
