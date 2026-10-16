@@ -1,42 +1,51 @@
-const services = [
-  { number: "01", title: "Brand foundations", description: "Positioning, naming support and the thinking that gives a visual identity something real to stand for.", tags: ["Direction", "Positioning", "Concept"] },
-  { number: "02", title: "Logo & identity", description: "Distinctive marks and considered visual identities that feel unmistakably yours, not borrowed from a trend.", tags: ["Logo design", "Visual identity", "Art direction"] },
-  { number: "03", title: "Identity systems", description: "Flexible rules, assets and guidelines that help your brand stay recognisable wherever it shows up.", tags: ["Typography", "Colour", "Guidelines"] },
-];
-const principles = [
-  { number: "01", title: "Start with the why.", description: "The strongest visual decisions come from a clear idea. We get to the heart of the thing before making it look like anything." },
-  { number: "02", title: "Make it work hard.", description: "A logo is only the beginning. The identity needs to work across real touchpoints, at different sizes, in everyday use." },
-  { number: "03", title: "Leave room to grow.", description: "A good system is recognisable without being rigid. It gives a brand a point of view and space to keep becoming." },
-];
 export default function Home() {
-  return <main>
-    <header className="site-header page-shell">
-      <a href="/" className="brand-link" aria-label="Toothless home"><img src="/brand/logos/toothless-02.svg" alt="Toothless" className="brand-logo" /></a>
-      <nav className="main-nav" aria-label="Main navigation"><a href="/work">Work</a><a href="/studio">Studio</a><a className="nav-contact" href="/contact">Let’s talk <span aria-hidden="true">↗</span></a></nav>
-    </header>
-    <section id="top" className="hero page-shell">
-      <div className="eyebrow"><span className="status-dot" /> Independent creative studio</div>
-      <div className="hero-grid"><div className="hero-copy">
-        <h1>Good ideas deserve a <em>distinct identity.</em></h1>
-        <div className="hero-bottom"><p>Toothless builds logos, visual identities and flexible systems for people making something worth noticing.</p><a className="text-link" href="/work">View selected work <span aria-hidden="true">↗</span></a></div>
-      </div></div>
-      <div className="hero-footnote"><span>Clear thinking. Distinctive design.</span><span>Scroll to explore ↓</span></div>
-    </section>
+  const projects = [
+    { slug: "toothless-studio", title: "Toothless Studio", type: "Identity system", year: "2026" },
+    { slug: "client-project-01", title: "Client project 01", type: "Brand identity", year: "In progress" },
+    { slug: "client-project-02", title: "Client project 02", type: "Visual identity", year: "In progress" },
+    { slug: "client-project-03", title: "Client project 03", type: "Identity system", year: "In progress" },
+  ];
 
-    <section className="client-strip" aria-label="Selected clients and collaborators"><div className="page-shell client-strip-inner"><div className="client-strip-heading"><p className="section-label">Good company <span>— 01</span></p><p>Selected clients & collaborators</p></div><div className="logo-marquee" aria-label="Placeholder client logos"><div className="logo-marquee-track"><span className="client-wordmark wordmark-serif">CLIENT ONE</span><span className="client-wordmark wordmark-bold">CLIENT TWO®</span><span className="client-wordmark wordmark-spaced">CLIENT THREE</span><span className="client-wordmark wordmark-serif">CLIENT FOUR</span><span className="client-wordmark wordmark-bold">CLIENT FIVE®</span><span className="client-wordmark wordmark-spaced">CLIENT SIX</span><span className="client-wordmark wordmark-serif" aria-hidden="true">CLIENT ONE</span><span className="client-wordmark wordmark-bold" aria-hidden="true">CLIENT TWO®</span><span className="client-wordmark wordmark-spaced" aria-hidden="true">CLIENT THREE</span><span className="client-wordmark wordmark-serif" aria-hidden="true">CLIENT FOUR</span><span className="client-wordmark wordmark-bold" aria-hidden="true">CLIENT FIVE®</span><span className="client-wordmark wordmark-spaced" aria-hidden="true">CLIENT SIX</span></div></div><p className="placeholder-note">Placeholder names for now — we’ll replace these with approved client logos.</p></div></section>
-    <section className="work-preview page-shell emre-home-work" aria-labelledby="featured-work-title">
-      <div className="emre-home-heading"><p className="section-label">Selected work</p><a className="text-link" href="/work">View all projects ↗</a></div>
-      <div className="emre-home-work-grid">
-        <a className="emre-home-work-card" href="/work/toothless-studio"><img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=1400&q=85" alt="Design materials, temporary Toothless Studio project image" loading="lazy"/><span className="emre-home-card-title">Toothless Studio <small>Identity system</small></span></a>
-        <a className="emre-home-work-card" href="/work/client-project-01"><img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=1400&q=85" alt="Temporary product project image" loading="lazy"/><span className="emre-home-card-title">Client Project 01 <small>Brand identity</small></span></a>
-        <a className="emre-home-work-card" href="/work/client-project-02"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=85" alt="Temporary product project image" loading="lazy"/><span className="emre-home-card-title">Client Project 02 <small>Visual identity</small></span></a>
-        <a className="emre-home-work-card" href="/work/client-project-03"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1400&q=85" alt="Temporary product project image" loading="lazy"/><span className="emre-home-card-title">Client Project 03 <small>Identity system</small></span></a>
+  return <main className="minimal-site">
+    <header className="site-header page-shell minimal-header">
+      <a href="/" className="minimal-wordmark" aria-label="Toothless home">toothless<span>®</span></a>
+      <nav className="main-nav" aria-label="Main navigation">
+        <a href="/work">Work</a><a href="/studio">Studio</a><a href="/contact">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <section className="minimal-intro page-shell">
+      <p className="minimal-overline">Independent creative studio · Available for select projects</p>
+      <h1>We build thoughtful identities for <em>good ideas.</em></h1>
+      <div className="minimal-intro-bottom">
+        <p>Toothless is a small design studio shaping brands through clear thinking, distinctive identity and useful systems.</p>
+        <a className="minimal-arrow-link" href="/work">Explore selected work <span aria-hidden="true">↘</span></a>
       </div>
     </section>
-    <section id="studio" className="studio-band"><div className="page-shell studio-layout"><p className="section-label">A little about us <span>— 02</span></p><div className="studio-copy"><h2>We make brands feel like <em>themselves.</em></h2><p>Toothless is an independent creative studio focused on logos, identity and systems. We turn sharp ideas into thoughtful, distinctive identities — made to work beyond the first impression.</p><p>Small by design. Curious by nature. Serious about the details that make the difference.</p><a className="light-text-link" href="/studio">More about the studio <span aria-hidden="true">↗</span></a></div></div></section>
-    <section id="services" className="services-section page-shell"><div className="section-heading"><p className="section-label">What we do <span>— 03</span></p><h2>From first thought<br/>to <em>full expression.</em></h2></div><div className="service-list">{services.map(service => <article className="service-row" key={service.number}><span className="service-number">{service.number}</span><h3>{service.title}</h3><div className="service-details"><p>{service.description}</p><div className="tag-list">{service.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div><span className="service-arrow" aria-hidden="true">↗</span></article>)}</div></section>
-    <section className="principles-section"><div className="page-shell"><div className="section-heading principles-heading"><p className="section-label">How we think <span>— 04</span></p><h2>Good design has a reason <em>to exist.</em></h2></div><div className="principles-grid">{principles.map(principle => <article className="principle-card" key={principle.number}><span className="principle-number">{principle.number}</span><h3>{principle.title}</h3><p>{principle.description}</p></article>)}</div></div></section>
-    <section className="process-section page-shell"><div className="process-intro"><p className="section-label">A clear process <span>— 05</span></p><h2>Thoughtful work.<br/><em>No mystery.</em></h2><p>Every project is different, but the aim stays the same: make the right decisions, together, and turn them into a system you can actually use.</p><a className="text-link" href="/studio">See how we work <span aria-hidden="true">↗</span></a></div><ol className="process-list"><li><span>01</span><div><h3>Listen</h3><p>Understand the business, the people and the problem.</p></div></li><li><span>02</span><div><h3>Define</h3><p>Find the central idea and the direction worth pursuing.</p></div></li><li><span>03</span><div><h3>Design</h3><p>Build the identity and refine the details until they feel right.</p></div></li><li><span>04</span><div><h3>Deliver</h3><p>Hand over a coherent, practical system ready for real life.</p></div></li></ol></section>
-    <footer id="contact" className="studio-footer"><div className="page-shell studio-footer-inner"><div className="studio-footer-top"><span className="footer-index">TOOTHLESS® / INDEPENDENT CREATIVE STUDIO</span><span className="footer-kicker">A good idea starts with a conversation.</span></div><div className="studio-footer-main"><h2>Make it<br/><em>matter.</em></h2><div className="studio-footer-action"><p>Logos, identity and systems for people making something worth noticing.</p><a href="/contact" className="footer-cta">Tell us what you’re thinking <span aria-hidden="true">↗</span></a></div></div><div className="studio-footer-bottom"><a className="footer-email" href="mailto:hi@toothless.design">hi@toothless.design</a><nav aria-label="Footer navigation"><a href="/">Home</a><a href="/work">Work</a><a href="/studio">Studio</a><a href="/contact">Contact</a></nav><span>© {new Date().getFullYear()} Toothless Studio</span></div></div></footer>
+
+    <section className="minimal-work page-shell" aria-labelledby="selected-work">
+      <div className="minimal-section-head"><h2 id="selected-work">Selected work</h2><span>2026 — 01/04</span></div>
+      <div className="minimal-project-list">
+        {projects.map((project, index) => <a className="minimal-project-row" href={"/work/" + project.slug} key={project.slug}>
+          <span className="minimal-project-index">0{index + 1}</span>
+          <span className="minimal-project-name">{project.title}</span>
+          <span className="minimal-project-type">{project.type}</span>
+          <span className="minimal-project-year">{project.year}</span>
+          <span className="minimal-project-arrow" aria-hidden="true">↗</span>
+        </a>)}
+      </div>
+      <p className="minimal-note">Some project names and visuals are placeholders and will be replaced with approved work.</p>
+      <a className="minimal-arrow-link minimal-all-work" href="/work">All projects <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section className="minimal-about page-shell">
+      <p className="minimal-overline">A little about us</p>
+      <div><h2>Small by design.<br/><em>Serious about the details.</em></h2><p>We partner with people building something meaningful, turning the idea at its centre into a brand that feels clear, distinct and ready to grow.</p><a className="minimal-arrow-link" href="/studio">More about the studio <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <footer className="minimal-footer page-shell">
+      <div className="minimal-footer-top"><p>Have something good in mind?</p><a href="/contact">Let’s talk <span aria-hidden="true">↗</span></a></div>
+      <div className="minimal-footer-bottom"><a className="minimal-wordmark" href="/">toothless<span>®</span></a><a href="mailto:hi@toothless.design">hi@toothless.design</a><span>© {new Date().getFullYear()} Toothless Studio</span></div>
+    </footer>
   </main>;
 }
