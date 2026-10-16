@@ -5,8 +5,8 @@ const projects: PlaceholderProject[] = [
  { slug: "client-project-03", number: "CL—003", title: "Client Project 03", focus: "Identity system", year: "Placeholder", palette: "project-tone-three", tone: "lilac", headline: "A system with purpose.", description: "Placeholder case study for a future identity system. Replace this copy and the image panels with approved project material before presenting it as completed client work." },
 ];
 export function generateStaticParams() { return projects.map(project => ({ slug: project.slug })); }
-export default async function PlaceholderProjectPage({ params }: { params: Promise<{ slug: string }> }) {
- const { slug } = await params;
+export default function PlaceholderProjectPage({ params }: { params: { slug: string } }) {
+ const { slug } = params;
  const project = projects.find(item => item.slug === slug);
  if (!project) return null;
  return <main><header className="site-header page-shell"><a href="/" className="brand-link" aria-label="Toothless home"><img src="/brand/logos/toothless-02.svg" alt="Toothless" className="brand-logo" /></a><nav className="main-nav" aria-label="Main navigation"><a href="/work" aria-current="page">Work</a><a href="/studio">Studio</a><a className="nav-contact" href="/contact">Let’s talk <span aria-hidden="true">↗</span></a></nav></header>
