@@ -606,3 +606,23 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 400; letter-spacing: -.07
 .emre-case-description>p{margin:0;font-size:10px;line-height:1.7;color:#555}.emre-case-description>div{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.emre-case-description>div span{border:1px solid #e2e2df;padding:5px 7px;font-size:8px;color:#666}
 .emre-case-placeholder-note{margin:18px 0 0;color:#999;font-size:9px}.emre-case-next{display:flex;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:48px;border-top:1px solid #eee;font-size:10px}
 @media(max-width:640px){.emre-home-work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 8px}.emre-home-card-title{font-size:11px}.emre-work-grid{grid-template-columns:1fr;gap:4px}.emre-work-image img{aspect-ratio:1.15}.emre-case-panel-hero{min-height:82vw}.emre-case-panel-wide{min-height:68vw}.emre-case-info{width:calc(100% - 24px);padding:24px 14px 20px;margin-bottom:34px}.emre-case-info-grid{grid-template-columns:1fr;gap:18px}.emre-case-next{flex-direction:column}}
+
+
+/* Selected work — reference gallery proportions and quiet product-tile treatment */
+.emre-home-work{width:calc(100% - 22px);max-width:none;padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(40px,6vw,80px)}
+.emre-home-heading{display:flex;justify-content:space-between;align-items:center;margin:0 2px 12px}
+.emre-home-heading .section-label{margin:0}
+.emre-home-heading .text-link{font-size:10px;color:#777}
+.emre-home-work-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.emre-home-work-card{display:block;min-width:0;aspect-ratio:1/1;background:#f6f6f6;border-radius:20px;overflow:hidden}
+.emre-home-work-art{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#f6f6f6;color:#252525}
+.emre-home-work-art>span{display:block}
+.art-toothless{background:#e9eee7;color:#193c2a;font-size:clamp(15px,2.5vw,38px);font-weight:600;letter-spacing:-.09em}
+.art-mark{font-size:.3em;vertical-align:top;margin-left:2px}
+.art-one{background:#f2f2f0}.art-symbol{font-size:clamp(52px,8vw,116px);color:#7d9d64;filter:drop-shadow(0 5px 4px #00000012)}
+.art-two{background:#e8e8e5}.art-type{font-family:Georgia,serif;font-size:clamp(18px,3.2vw,48px);line-height:.83;letter-spacing:-.08em;text-align:center}
+.art-three{background:#f0efed}.art-object{width:34%;aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#d5d5d1,#fdfdfb 68%,#d4d4d0);box-shadow:0 12px 24px #00000010,inset 0 0 0 1px #e0e0dc}
+.emre-home-work-card:hover .emre-home-work-art{filter:brightness(.975)}
+.emre-home-awards{min-height:74px;margin-top:9px;padding:16px 24px;display:flex;align-items:center;justify-content:center;gap:clamp(12px,3vw,40px);flex-wrap:wrap;background:#f6f6f6;border-radius:18px;color:#696969}
+.emre-home-awards span{font-size:clamp(7px,.8vw,10px);letter-spacing:.08em;font-weight:700}
+@media(max-width:640px){.emre-home-work{width:calc(100% - 16px);padding-top:28px}.emre-home-work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.emre-home-work-card{border-radius:15px}.emre-home-awards{gap:12px;padding:14px 12px}.emre-home-awards span{font-size:7px}}
